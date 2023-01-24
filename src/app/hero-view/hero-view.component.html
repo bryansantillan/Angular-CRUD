@@ -1,0 +1,26 @@
+<br>
+<h1>Ver reseña del heroe</h1>
+<br>
+<div *ngIf="hero">
+
+  <h2>Detalles de {{hero.name | uppercase}} </h2>
+
+  <div>
+
+      <a> Nombre del heroe: {{hero.name}}</a><br>
+
+
+      <a> Titulo del heroe: {{hero.title}}</a><br>
+
+      <a> Descripcion del heroe: {{hero.description}}</a><br>
+    <br>
+      <a routerLink="/detail/{{hero.id}}">
+        <button >Editar</button>
+     </a>
+     <button type="button" class="delete" title="delete hero"
+      (click)="delete(hero)">Borrar heroe</button>
+  </div>
+<br><br>
+  <button type="button" (click)="goBack()">Atrás</button>
+
+</div>

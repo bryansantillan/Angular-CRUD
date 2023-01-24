@@ -1,0 +1,42 @@
+<br>
+<h2>Crear una nueva reseña de heroe</h2>
+
+<div>
+  Registrar un nuevo heroe:
+  <a routerLink="/new">
+    <button >Crear</button>
+  </a>
+  <br><br><br>
+</div>
+<h2>Mis heroes creados</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <!-- <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a> -->
+    <!-- <a>ID: {{hero.id}}</a> <br> -->
+    <a>Nombre: {{hero.name}}</a><br>
+
+    <a>Titulo: {{hero.title}}</a><br>
+
+    <a routerLink="/view/{{hero.id}}">
+      <button >Ver</button>
+   </a>
+    <a routerLink="/detail/{{hero.id}}">
+       <button >Editar</button>
+    </a>
+
+
+
+  </li>
+</ul>
+
+
+<!--
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul> -->

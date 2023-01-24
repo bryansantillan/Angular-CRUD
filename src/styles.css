@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  font-family: sans-serif;
+  background-color: #F9F9F9;
+  margin-left: 40px;
+}
+label{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #444
+}
+
+button{
+  background-color: #C65BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 2px;
+  cursor:pointer;
+
+}
+button:hover{
+  background-color: #8600CD;
+}
+
+button:disabled{
+  background-color: black;
+}
+
+input{
+  margin-left: 7px;
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+}
+#titulo{
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 3.5em;
+}
+h2{
+  font-size: 2.2em;
+  color:#4F0078;
+  font-weight: bold;
+}
+
+#Barra {
+
+  text-align:center;
+}
+#Barra a{
+  background-color: #C65BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 2px;
+  cursor:pointer;
+
+}
+
+
+ footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-size: 13px;
+  height: 40px;
+  color: black;
+}

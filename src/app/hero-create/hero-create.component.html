@@ -1,0 +1,31 @@
+<br>
+<h2>Crear nuevo heroe</h2>
+
+    <!-- <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/> -->
+    <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+      <br>
+      <label for="name-hero">Nombre del heroe: </label>
+      <input id="name-hero" type="text" formControlName="name">
+      <br><br>
+
+
+      <label for="title-hero">Titulo del heroe: </label>
+      <input id="title-hero" type="text" formControlName="title">
+      <br><br>
+
+      <label for="description-hero">Descripcion del heroe: </label>
+      <input id="description-hero" type="text" formControlName="description">
+      <br><br>
+
+      <p>Información recogida por el formulario: {{ heroForm.value | json }}</p>
+
+      <p>Todos los campos son requeridos. Los 2 primeros deben tener mas de 3 carácteres y el último más de 10 para que se habilite el botón de añadir</p>
+      <button type="button" class="add-button" [disabled]="!heroForm.valid" (click)="add(heroForm.value.name,heroForm.value.title, heroForm.value.description)">
+        Añadir nuevo heroe
+      </button><p>Estado del formulario: {{ heroForm.status | json }}</p>
+    </form>
+
+
+  <button type="button" (click)="goBack()">Atrás</button>
+
+

@@ -1,0 +1,36 @@
+<br>
+<h1>Modificar reseña del heroe</h1>
+<br>
+<div *ngIf="hero">
+
+  <h2>Detalles de {{hero.name | uppercase}} </h2>
+
+  <div>
+    <!-- <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/> -->
+    <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+      <a> Nombre del heroe: {{hero.name}}</a><br>
+      <label for="name-hero">Cambiarlo por: </label>
+      <input id="name-hero" type="text" formControlName="name">
+      <br><br>
+
+      <a> Titulo del heroe: {{hero.title}}</a><br>
+      <label for="title-hero">Cambiarlo por: </label>
+      <input id="title-hero" type="text" formControlName="title">
+      <br><br>
+
+      <a> Descripcion del heroe: {{hero.description}}</a><br>
+      <label for="description-hero">Cambiarlo por: </label>
+      <input id="description-hero" type="text" formControlName="description">
+      <br><br>
+      <p>Información recogida por el formulario: {{ heroForm.value | json }}</p>
+      <p>Todos los campos son requeridos. Los 2 primeros deben tener mas de 3 carácteres y el último más de 10 para que se habilite el botón de añadir</p>
+      <button type="submit" [disabled]="!heroForm.valid" (click)="save()">Guardar</button>
+      <p>Validez del formulario: {{ heroForm.status | json }}</p>
+
+    </form>
+
+  </div>
+  <br>
+  <button type="button" (click)="goBack()">Atrás</button>
+
+</div>

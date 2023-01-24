@@ -1,0 +1,28 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Spiderman",
+      "title": "El heroe aracnido",
+      "description": "El increible y asombroso superheroe rojo y azul"
+    },
+    {
+      "name": "Hulk",
+      "title": "Gigante verde",
+      "description": "El experimiento de mounstro verde que se convirtio en el salvador de la humanidad",
+      "id": 2
+    },
+    {
+      "name": "Superman",
+      "title": "El superhombre",
+      "description": "El hombre que salvaba a gente después de trabajar y sentía debilidad por la criptonita",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Batman",
+      "title": "El enmascarado millonario",
+      "description": "Salvo a la humanidad y murió para que Gotham no se sumergiera en el caos"
+    }
+  ]
+}
